@@ -10,6 +10,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #000000; /* Dark theme background */
+    color: #ffffff; /* Dark theme text color */
 }
 
 /* Hero container styles */
@@ -32,6 +34,7 @@ body {
 
 .hero-container .overlay {
     position: absolute;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -63,6 +66,7 @@ body {
     height: 400px;
     position: absolute;
     top: 50px;
+    margin-top: 30px;
     left: 0;
     width: 100%;
     z-index: 2;
@@ -182,16 +186,6 @@ nav {
 /* Mobile menu toggle styles */
 .menu-toggle {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.3s;
 }
 
 /* Mobile nav styles */
@@ -250,13 +244,32 @@ nav {
 /* About section styles */
 #about {
     padding: 2rem;
-    background: #e2e2e2;
+    background: #121212; /* Dark theme background */
+    color: #e0e0e0; /* Dark theme text color */
+}
+
+.dark-section h2, .dark-section h3 {
+    color: #ffffff;
+}
+
+.dark-section p, .dark-section ul {
+    color: #e0e0e0;
+}
+
+.dark-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.dark-section .about-item {
+    margin-bottom: 20px;
 }
 
 /* Services section styles */
 #services {
     padding: 2rem;
-    background: #f4f4f4;
+    background: #1e1e1e; /* Dark theme background */
+    color: #e0e0e0; /* Dark theme text color */
 }
 
 #services ul {
@@ -268,13 +281,15 @@ nav {
 /* Projects section styles */
 #projects {
     padding: 2rem;
-    background: #e2e2e2;
+    background: #121212; /* Dark theme background */
+    color: #e0e0e0; /* Dark theme text color */
 }
 
 /* Contact section styles */
 #contact {
     padding: 2rem;
-    background: #f4f4f4;
+    background: #1e1e1e; /* Dark theme background */
+    color: #e0e0e0; /* Dark theme text color */
 }
 
 #contact-form {
@@ -343,7 +358,7 @@ footer {
 
     .menu-toggle {
         order: 2;
-        margin-right: 25px;
+        margin-right: 15px;
         padding-top: 5px;
         height: 30px; /* Set height to 30px */
         width: 30px; /* Set width to 30px */
@@ -367,11 +382,25 @@ footer {
         font-size: 16px;
         transition: color 0.3s;
         align-items: center;
-        max-width: 350px;
+        max-width: 330px;
     }
 
     .hero-logo-container {
-        width: 350px; /* Increase width by 40% */
+        width: 330px; /* Increase width by 40% */
         margin: 1rem auto; /* Center the logo container horizontally */
+    }
+
+    .company-name {
+        display: none;
+    }
+
+    /* Mobile menu toggle styles */
+    .menu-toggle {
+        display: flex;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+        background-size: contain;
     }
 }
