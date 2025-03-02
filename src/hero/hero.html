@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section - Forgentic</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" href="../assets/logo.png" type="image/png"> <!-- Add favicon -->
+</head>
+<body>
+    <section class="hero-container">
+        <div class="overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-content" id="hero">
+                <div class="hero-logo-container">
+                    <img src="../assets/logo_hero_content.png" alt="Forgentic" class="hero-logo hero-logo-blue">
+                    <img src="../assets/logo_hero_content_white.png" alt="Forgentic" class="hero-logo hero-logo-white">
+                </div>
+                <p>Revolutionizing IA assistance for you</p>
+                <button class="hero-button">Get Started!</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heroSection = document.getElementById('hero-section');
+            const heroObject = heroSection.querySelector('object');
+            heroObject.addEventListener('load', function() {
+                const heroDocument = heroObject.contentDocument || heroObject.contentWindow.document;
+                heroDocument.documentElement.style.height = 'auto'; /* Adjust height to its content */
+                heroDocument.body.style.height = 'auto'; /* Adjust height to its content */
+            });
+        });
+    </script>
+</body>
+</html>

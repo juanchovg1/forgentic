@@ -5,114 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgentic Landing Page</title>
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="icon" href="src/assets/logo.png" type="image/png"> <!-- Add favicon -->
 </head>
 <body>
-    <section class="hero-container">
-        <video autoplay muted loop playsinline>
-            <source src="src/assets/videobackground.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-        <header>
-            <nav class="navbar_mobile" id="navbar_mobile">
-                <div class="menu-toggle" id="mobile-menu">
-                    <img src="src/assets/menu.png" alt="Menu Nav" class="menu">
-                </div>
-                <div class="logo-container">
-                    <img src="src/assets/logo.png" alt="Forgentic Logo" class="logo">
-                    <span class="company-name">FORGENTIC</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="hero-content-wrapper">
-            <div class="hero-content" id="hero">
-                <div class="hero-logo-container">
-                    <img src="src/assets/logo_hero_content.png" alt="Forgentic" class="hero-logo hero-logo-blue">
-                    <img src="src/assets/logo_hero_content_white.png" alt="Forgentic" class="hero-logo hero-logo-white">
-                </div>
-                <p>Automate your daily tasks with personalized virtual agents. Focus on your business while we take care of the rest.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Background video -->
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="src/assets/videobackground.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
 
-    <section id="about" class="dark-section">
-        <h2>About Us</h2>
-        <p>Forgentic is dedicated to providing top-notch services to help your business thrive.</p>
-        <div class="about-details">
-            <div class="about-item">
-                <h3>Our Mission</h3>
-                <p>To automate your daily tasks with personalized virtual agents, allowing you to focus on your business.</p>
+    <!-- Import HTML files from each section -->
+    <header>
+        <nav class="navbar_mobile" id="navbar_mobile">
+            <div class="menu-toggle" id="mobile-menu">
+                <img src="src/assets/menu.png" alt="Menu Nav" class="menu">
             </div>
-            <div class="about-item">
-                <h3>Our Vision</h3>
-                <p>To be the leading provider of virtual agent solutions, transforming the way businesses operate.</p>
+            <div class="logo-container">
+                <img src="src/assets/logo.png" alt="Forgentic Logo" class="logo">
+                <span class="company-name">FORGENTIC</span>
             </div>
-            <div class="about-item">
-                <h3>Our Values</h3>
-                <ul>
-                    <li>Innovation</li>
-                    <li>Integrity</li>
-                    <li>Customer Focus</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Consulting</li>
-            <li>Development</li>
-            <li>Design</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Our Projects</h2>
-        <div id="project-list"></div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="hero-section" class="content-wrapper-hero" style="height: 60vh;">
+        <!-- Contenido del hero.html -->
+        <object type="text/html" data="src/hero/hero.html"></object>
+    </div>
+    <div id="about-section" class="content-wrapper">
+        <section id="about">
+            <!-- Contenido del about.html -->
+        </section>
+    </div>
+    <div id="services-section" class="content-wrapper">
+        <section id="services">
+            <!-- Contenido del services.html -->
+        </section>
+    </div>
+    <div id="projects-section" class="content-wrapper">
+        <section id="projects">
+            <!-- Contenido del projects.html -->
+        </section>
+    </div>
+    <div id="contact-section" class="content-wrapper">
+        <section id="contact">
+            <!-- Contenido del contact.html -->
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2023 Forgentic. All rights reserved.</p>
+        <p>&copy; 2025 Forgentic. All rights reserved.</p>
     </footer>
-
-    <div class="mobile-nav" id="mobile-nav">
-        <div class="close-btn" id="close-btn">&times;</div>
-        <ul class="nav-links-mobile">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
 
     <script src="src/scripts/main.js"></script>
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileNav = document.getElementById('mobile-nav');
-        const closeBtn = document.getElementById('close-btn');
-        const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
+        //const mobileNav = document.getElementById('mobile-nav');
+        //const closeBtn = document.getElementById('close-btn');
+        //const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
 
         mobileMenu.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
@@ -126,6 +82,19 @@
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
             });
+        });
+
+        // Set video playback rate
+        const backgroundVideo = document.getElementById('background-video');
+        backgroundVideo.playbackRate = 0.25; // Make the video play at 5% of its original speed
+
+        // Adjust hero-section height to its content
+        const heroSection = document.getElementById('hero-section');
+        const heroObject = heroSection.querySelector('object');
+        heroObject.addEventListener('load', function() {
+            const heroDocument = heroObject.contentDocument || heroObject.contentWindow.document;
+            heroDocument.documentElement.style.height = 'auto'; /* Adjust height to its content */
+            heroDocument.body.style.height = 'auto'; /* Adjust height to its content */
         });
     </script>
 </body>

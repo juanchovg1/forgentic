@@ -1,0 +1,283 @@
+/* #TODO: Hero Container Styles */
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+    height: auto; /* Adjust height to its content */
+    min-height: 500px; /* Set minimum height to 500px */
+    backdrop-filter: blur(10px); /* Add blur effect */
+    background: rgba(255, 255, 255, 0.1); /* Add a semi-transparent background */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.hero-container .overlay {
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Disable pointer events for the overlay */
+}
+
+
+.hero-container .hero-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust height to its content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none; /* Disable pointer events for the wrapper */
+}
+
+.hero-container .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0rem;
+    visibility: visible; /* Ensure visibility */
+    opacity: 1; /* Ensure opacity */
+    transition: visibility 0.3s, opacity 0.3s; /* Add transition for visibility and opacity */
+    min-height: 500px; /* Set minimum height to 500px */
+    pointer-events: auto; /* Enable pointer events for the content */
+    z-index: 3; /* Ensure the content is above the wrapper */
+}
+
+/* #TODO: Hero Content Styles */
+.hero-content h1 {
+    font-size: 3rem;
+    transition: color 0.3s;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    max-width: 500px;
+}
+
+.hero-content p:hover {
+    color: #0cc0df;
+}
+
+/* #TODO: Hero Logo Styles */
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 490px; /* Increase width by 40% */
+    margin: 1rem auto; /* Center the logo container horizontally */
+    pointer-events: auto; /* Enable pointer events for the logo container */
+    z-index: 4; /* Ensure the logo container is above other elements */
+}
+
+.hero-logo {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.hero-logo-blue {
+    background-image: url('../assets/logo_hero_content.png');
+}
+
+.hero-logo-white {
+    background-image: url('../assets/logo_hero_content_white.png');
+    display: none; /* Initially hidden */
+}
+
+.hero-logo-container:hover .hero-logo-blue {
+    display: none; /* Hide blue logo on hover */
+}
+
+.hero-logo-container:hover .hero-logo-white {
+    display: inline-block; /* Show white logo on hover */
+}
+
+/* #TODO: Hero Section Styles */
+#hero-section {
+    width: 100%;
+    height: auto; /* Adjust height to its content */
+}
+
+#hero-section object {
+    min-height: 500px; /* Set minimum height to 500px */
+    width: 100%;
+    height: auto; /* Adjust height to its content */
+    border-radius: 20px; /* Make corners more rounded */
+    margin-top: 80px; /* Add top margin to prevent overlap with header */
+}
+
+/* #TODO: Hero Button Styles */
+.hero-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #f2f2f2;
+    background-color: #0cc0df;
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    z-index: 4; /* Ensure the logo container is above other elements */
+}
+
+.hero-button:hover {
+    background-color: #f2f2f2;
+    color: #0cc0df;
+    border: 2px solid #f2f2f2; /* Change border color to white */
+}
+
+/* #TODO: Header Styles */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #0cc0df;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links li a:active {
+    color: #fff;
+    background-color: #0cc0df;
+}
+
+/* #TODO: Mobile Menu Toggle Styles */
+.menu-toggle {
+    display: none;
+}
+
+/* #TODO: Mobile Nav Styles */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #131516;
+    color: #fff;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden; /* Prevent vertical scroll */
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-nav .nav-links-mobile {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav .nav-links-mobile li {
+    margin: 1rem 0;
+}
+
+.mobile-nav .nav-links-mobile li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.mobile-nav .nav-links-mobile li a:hover {
+    color: #0cc0df;
+}
+
+.mobile-nav .nav-links-mobile li a:active {
+    color: #0cc0df;
+}
+
+/* #TODO: Media Queries */
+@media (max-width: 768px) {
+    .hero-container {
+        height: auto; /* Adjust height to its content on mobile */
+        min-height: 100vh; /* Ensure the hero section takes full viewport height on mobile */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo-container {
+        order: 1;
+        margin-top: 0;
+        margin-left: 0px; /* Add left margin for mobile */
+    }
+
+    .nav-links-mobile {
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+        transition: color 0.3s;
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Adjust font size for mobile */
+        transition: color 0.3s;
+        align-items: center;
+        max-width: 90%; /* Adjust max-width for mobile */
+    }
+
+    .hero-logo-container {
+        width: 80%; /* Adjust width for mobile */
+        margin: 1rem auto; /* Center the logo container horizontally */
+    }
+
+    .hero-button {
+        padding: 0.5rem 1rem; /* Adjust padding for mobile */
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+
+    .company-name {
+        display: none;
+    }
+}

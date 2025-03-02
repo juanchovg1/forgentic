@@ -1,0 +1,12 @@
+/* Services section styles */
+#services {
+    padding: 2rem;
+    color: #e0e0e0; /* Dark theme text color */
+}
+
+#services ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+```

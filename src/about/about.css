@@ -1,0 +1,23 @@
+/* About section styles */
+#about {
+    padding: 2rem;
+    background: #121212; /* Dark theme background */
+    color: #e0e0e0; /* Dark theme text color */
+}
+
+.dark-section h2, .dark-section h3 {
+    color: #ffffff;
+}
+
+.dark-section p, .dark-section ul {
+    color: #e0e0e0;
+}
+
+.dark-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.dark-section .about-item {
+    margin-bottom: 20px;
+}

@@ -1,7 +1,15 @@
+/* Import CSS files from each section */
+@import url('../hero/hero.css');
+@import url('../about/about.css');
+@import url('../services/services.css');
+@import url('../projects/projects.css');
+@import url('../contact/contact.css');
+
 /* Reset some default styles */
 body, h1, h2, p, ul, li, form, label, input, textarea, button {
     margin: 0;
-    padding: 0;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
     box-sizing: border-box;
 }
 
@@ -10,20 +18,12 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: #000000; /* Dark theme background */
     color: #ffffff; /* Dark theme text color */
 }
 
-/* Hero container styles */
-.hero-container {
-    position: relative;
-    width: 100%;
-    min-height: 550px;
-    overflow: hidden;
-}
-
-.hero-container video {
-    position: absolute;
+/* Background video styles */
+#background-video {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,105 +32,40 @@ body {
     z-index: -1;
 }
 
-.hero-container .overlay {
-    position: absolute;
-    align-items: center;
+.overlay {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 0;
 }
 
-.hero-container header {
-    position: fixed; /* Make the header fixed */
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 50px;
-    z-index: 1000; /* Ensure the header is above other content */
-    padding-left: 10px;
-    padding-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: rgba(0, 0, 0, 0.5); /* Add a background to the header */
-    backdrop-filter: blur(10px); /* Optional: Add a blur effect for better readability */
+/* Content wrapper styles */
+.content-wrapper-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: transparent; /* Ensure background is transparent */
 }
 
-.hero-container .hero-content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    position: absolute;
-    top: 50px;
-    margin-top: 30px;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-.hero-container .hero-content {
-    text-align: center;
-    color: #fff;
-    padding: 0rem;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    transition: color 0.3s;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    transition: color 0.3s;
-    max-width: 500px;
-}
-
-.hero-content:hover h1,
-.hero-content:hover p {
-    color: #0cc0df;
-}
-
-.hero-logo-container {
-    position: relative;
-    width: 490px; /* Increase width by 40% */
-    margin: 1rem auto; /* Center the logo container horizontally */
-}
-
-.hero-logo {
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-}
-
-.hero-logo-blue {
-    background-image: url('assets/logo_hero_content.png');
-}
-
-.hero-logo-white {
-    background-image: url('assets/logo_hero_content_white.png');
-    display: none; /* Initially hidden */
-}
-
-.hero-content:hover .hero-logo-blue {
-    display: none; /* Hide blue logo on hover */
-}
-
-.hero-content:hover .hero-logo-white {
-    display: inline-block; /* Show white logo on hover */
+/* Content wrapper styles */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: transparent; /* Ensure background is transparent */
 }
 
 /* Header styles */
 header {
     background: transparent;
     color: #fff;
-    padding: 1rem 0;
+    padding: 15px 15px 15px 15px;
     width: 100%;
+    position: fixed; /* Ensure the header remains pinned to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the header is above other content */
 }
 
 nav {
@@ -146,16 +81,17 @@ nav {
 }
 
 .logo {
-    height: 60px; /* Set height to 60px */
+    height: 28px; /* Set height to 40px */
+    width: 28px; /* Set width to 40px */
     margin-right: 5px;
 }
 
 .company-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 900; /* Set font weight to black */
+    font-size: 16x;
+    font-weight: 750; /* Set font weight to black */
     color: #fff;
-    letter-spacing: 0.8rem; /* Set letter spacing */
+    letter-spacing: 2px; /* Set letter spacing */
 }
 
 .nav-links {
@@ -163,7 +99,6 @@ nav {
     display: flex;
     gap: 0.1rem;
     align-items: center;
-    margin-right: 15px;
 }
 
 .nav-links li a {
@@ -244,7 +179,7 @@ nav {
 /* About section styles */
 #about {
     padding: 2rem;
-    background: #121212; /* Dark theme background */
+    background: transparent; /* Ensure background is transparent */
     color: #e0e0e0; /* Dark theme text color */
 }
 
@@ -268,7 +203,7 @@ nav {
 /* Services section styles */
 #services {
     padding: 2rem;
-    background: #1e1e1e; /* Dark theme background */
+    background: transparent; /* Ensure background is transparent */
     color: #e0e0e0; /* Dark theme text color */
 }
 
@@ -281,14 +216,14 @@ nav {
 /* Projects section styles */
 #projects {
     padding: 2rem;
-    background: #121212; /* Dark theme background */
+    background: transparent; /* Ensure background is transparent */
     color: #e0e0e0; /* Dark theme text color */
 }
 
 /* Contact section styles */
 #contact {
     padding: 2rem;
-    background: #1e1e1e; /* Dark theme background */
+    background: transparent; /* Ensure background is transparent */
     color: #e0e0e0; /* Dark theme text color */
 }
 
@@ -330,13 +265,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero-container {
-        height: 40vh;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
 
     .nav-links {
         display: none;
@@ -345,9 +273,7 @@ footer {
     header {
         align-items: center;
         justify-content: space-around;
-        padding-top: 5px; /* Set top padding to 5px */
-        padding-bottom: 5px; /* Set bottom padding to 5px */
-        padding-left: 0px;
+        padding: 15px 15px 15px 15px;
     }
 
     .logo-container {
@@ -357,9 +283,8 @@ footer {
     }
 
     .menu-toggle {
+        display: flex;
         order: 2;
-        margin-right: 15px;
-        padding-top: 5px;
         height: 30px; /* Set height to 30px */
         width: 30px; /* Set width to 30px */
         vertical-align: middle;
@@ -367,27 +292,6 @@ footer {
 
     .nav-links-mobile {
         align-items: center;
-    }
-
-    .logo {
-        height: 40px; /* Reduce height for mobile */
-    }
-
-    .hero-content h1 {
-        font-size: 2.3rem;
-        transition: color 0.3s;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-        transition: color 0.3s;
-        align-items: center;
-        max-width: 330px;
-    }
-
-    .hero-logo-container {
-        width: 330px; /* Increase width by 40% */
-        margin: 1rem auto; /* Center the logo container horizontally */
     }
 
     .company-name {
@@ -400,7 +304,7 @@ footer {
         cursor: pointer;
         width: 35px;
         height: 35px;
-        padding: 5px;
+        margin-right: 25px;
         background-size: contain;
     }
 }
